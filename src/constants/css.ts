@@ -1,8 +1,10 @@
 export const Color: {
   blue: (opacity?: number) => string;
+  borderGray: (opacity?: number) => string;
   lightBlue: (opacity?: number) => string;
   darkBlue: (opacity?: number) => string;
   darkGold: (opacity?: number) => string;
+  darkerGray: (opacity?: number) => string;
   logoBlue: (opacity?: number) => string;
   skyBlue: (opacity?: number) => string;
   littleBoyBlue: (opacity?: number) => string;
@@ -20,11 +22,14 @@ export const Color: {
   purple: (opacity?: number) => string;
   redOrange: (opacity?: number) => string;
   vantaBlack: (opacity?: number) => string;
+  wellGray: (opacity?: number) => string;
 } = {
   blue: (opacity = 1) => `rgba(5,110,178,${opacity})`,
+  borderGray: (opacity = 1) => `rgba(204,204,204,${opacity})`,
   lightBlue: (opacity = 1) => `rgba(117,192,255,${opacity})`,
   darkBlue: (opacity = 1) => `rgba(0,70,195,${opacity})`,
   darkGold: (opacity = 1) => `rgba(250,193,50,${opacity})`,
+  darkerGray: (opacity = 1) => `rgba(85,85,85,${opacity})`,
   logoBlue: (opacity = 1) => `rgba(65, 140, 235,${opacity})`,
   skyBlue: (opacity = 1) => `rgba(63,175,255,${opacity})`,
   littleBoyBlue: (opacity = 1) => `rgba(103,163,217,${opacity})`,
@@ -41,7 +46,8 @@ export const Color: {
   logoGreen: (opacity = 1) => `rgba(97,226,101,${opacity})`,
   purple: (opacity = 1) => `rgba(152,28,235,${opacity})`,
   redOrange: (opacity = 1) => `rgba(240,100,70,${opacity})`,
-  vantaBlack: (opacity = 1) => `rgba(0,0,0,${opacity})`
+  vantaBlack: (opacity = 1) => `rgba(0,0,0,${opacity})`,
+  wellGray: (opacity = 1) => `rgba(238,238,238,${opacity})`
 };
 
 export const strongColors: string[] = ['rose', 'red', 'purple'];
