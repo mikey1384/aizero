@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo } from 'react';
 import StackTrace from 'stacktrace-js';
-import { css } from '@emotion/css';
 import { Color, borderRadius } from '~/constants/css';
 import { clientVersion } from '~/constants/defaultValues';
 import URL from '~/constants/URL';
@@ -87,22 +86,6 @@ export default class ErrorBoundary extends Component<
               {componentPath}
             </div>
           ) : null}
-          <div
-            className={css`
-              &:hover {
-                text-decoration: underline;
-              }
-            `}
-            style={{
-              cursor: 'pointer',
-              color: Color.logoBlue(),
-              fontSize: '1.5rem',
-              marginTop: '3rem'
-            }}
-            onClick={() => window.location.reload()}
-          >
-            Did you take the screenshot? Then tap here to reload the website
-          </div>
         </div>
       );
     }
