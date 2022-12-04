@@ -97,13 +97,6 @@ export const videoRewardHash = {
   }
 };
 
-export const wordleGuessReaction = {
-  1: 'JACKPOT',
-  2: 'UNBELIEVABLE',
-  3: 'BRILLIANT',
-  4: 'IMPRESSIVE'
-};
-
 export const cardLevelHash = {
   1: {
     color: 'logoBlue',
@@ -124,36 +117,6 @@ export const cardLevelHash = {
   5: {
     color: 'gold',
     label: 'gold'
-  }
-};
-
-export const wordLevelHash = {
-  1: {
-    label: 'basic',
-    rewardAmount: 10,
-    color: 'logoBlue'
-  },
-  2: {
-    label: 'elementary',
-    rewardAmount: 25,
-    color: 'pink'
-  },
-  3: {
-    label: 'intermediate',
-    rewardAmount: 50,
-    color: 'orange'
-  },
-  4: {
-    label: 'advanced',
-    rewardAmount: 100,
-    coinAmount: 5,
-    color: 'red'
-  },
-  5: {
-    label: 'epic',
-    rewardAmount: 500,
-    coinAmount: 100,
-    color: 'gold'
   }
 };
 
@@ -185,33 +148,4 @@ export const rewardReasons = {
   }
 };
 
-export const returnMaxRewards = ({ rewardLevel }) => {
-  let maxRewards = 5;
-  if (rewardLevel > 0) {
-    maxRewards = 10 * rewardLevel;
-  }
-  return maxRewards;
-};
-
 export const maxSizes = [300, 400, 500, 650, 800, 1000, 1500, 2000];
-
-export const returnMaxUploadSize = (fileUploadLvl) => {
-  return maxSizes[fileUploadLvl] * mb;
-};
-
-export function returnWordLevel({ frequency, word }) {
-  const intermediateWordFrequency = 4;
-  const advancedWordFrequency = 2.5;
-  const epicWordFrequency = 1.6;
-
-  if (!frequency) return 3;
-  if (frequency > intermediateWordFrequency) {
-    if (word.length < 7) return 1;
-    return 2;
-  }
-  if (word.slice(-2) === 'ly') return 3;
-  if (frequency > advancedWordFrequency) return 3;
-  if (frequency > epicWordFrequency) return 4;
-  if (frequency <= epicWordFrequency) return 5;
-  return 3;
-}

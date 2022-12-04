@@ -8,7 +8,10 @@ import App from './containers/App';
 
 library.add(faAlignJustify);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById('root');
+const root = rootElement
+  ? ReactDOM.createRoot(rootElement)
+  : ReactDOM.createRoot(document.createElement('div'));
 
 root.render(
   <BrowserRouter>
