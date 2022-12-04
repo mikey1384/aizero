@@ -14,7 +14,8 @@ const auth = () => ({
 });
 
 interface ErrorBoundaryProps {
-  children: React.ReactNode;
+  children: React.ReactNode | React.ReactNode[];
+  className?: string;
   innerRef?: React.RefObject<HTMLInputElement>;
   userId?: number;
   username?: string;
