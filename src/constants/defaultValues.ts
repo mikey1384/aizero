@@ -1,24 +1,6 @@
 import { Color } from '~/constants/css';
 
 export const clientVersion = '0.0.1';
-export const defaultContentState = {
-  isEditing: false,
-  placeholderHeight: 0,
-  rewards: [],
-  comments: [],
-  likes: [],
-  pictures: [],
-  questions: [],
-  status: {},
-  recommendations: [],
-  subjects: [],
-  tags: [],
-  commentsLoadMoreButton: false,
-  subjectsLoadMoreButton: false,
-  rootObj: {},
-  profileTheme: 'logoBlue'
-};
-
 export const CHAT_ID_BASE_NUMBER = import.meta.env.VITE_CHAT_ID_BASE_NUMBER;
 export const DEFAULT_PROFILE_THEME = 'logoBlue';
 export const DESCRIPTION_LENGTH_FOR_EXTRA_REWARD_LEVEL = 1000;
