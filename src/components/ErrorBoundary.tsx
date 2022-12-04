@@ -39,13 +39,17 @@ export default class ErrorBoundary extends Component<
   async componentDidCatch(error: Error, info: ErrorInfo) {
     this.setState({ hasError: true });
     const errorStack = await StackTrace.fromError(error);
-    await StackTrace.report(errorStack, `${URL}/user/error`, {
-      clientVersion,
-      message: error.message,
-      componentPath: this.props.componentPath,
-      info: info?.componentStack,
-      token: auth()?.headers?.authorization
-    });
+    await StackTrace.report(
+      errorStack,
+      `${URL}/user/error`,
+      JSON.stringify({
+        clientVersion,
+        message: error.message,
+        componentPath: this.props.componentPath,
+        info: info?.componentStack,
+        token: auth()?.headers?.authorization
+      })
+    );
     console.log(error);
   }
 
