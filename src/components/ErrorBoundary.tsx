@@ -19,6 +19,7 @@ interface ErrorBoundaryProps {
   innerRef?: React.RefObject<HTMLInputElement>;
   userId?: number;
   username?: string;
+  clientVersion: string;
   componentPath: string;
   style?: React.CSSProperties;
 }

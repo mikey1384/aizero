@@ -37,43 +37,6 @@ export const mb = 1000;
 export const VOCAB_CHAT_TYPE = 'vocabulary';
 export const AI_DRAWING_CHAT_TYPE = 'ai-image-cards';
 
-export const charLimit = {
-  chat: {
-    subject: 200,
-    message: 3500
-  },
-  comment: 10000,
-  interactive: {
-    heading: 150,
-    description: 5000,
-    youtube: 300
-  },
-  playlist: {
-    title: 200,
-    description: 5000
-  },
-  videoQuestion: {
-    title: 2000,
-    choice: 2000
-  },
-  subject: {
-    title: 300,
-    description: 20000
-  },
-  rewardComment: 5000,
-  statusMsg: 500,
-  url: {
-    title: 300,
-    description: 20000,
-    url: 1000
-  },
-  video: {
-    title: 200,
-    description: 10000,
-    url: 300
-  }
-};
-
 export const cardProps = {
   common: [],
   superior: ['glowy'],
