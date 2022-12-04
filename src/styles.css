@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+  font-size: 10px;
+  font-family: 'Noto Sans', Helvetica, sans-serif, Arial;
+  background-color: rgb(250, 250, 250);
+  margin: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(5, 110, 178);
+}
+
+video {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+hr {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background: rgb(231, 231, 231);
+}
+
+ul {
+  margin-top: 0;
+}
+
+#react-view {
+  height: 100%;
+}
+
+#App {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.mobile {
+  display: none !important;
+}
+
+.momentum-scroll-enabled {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  50% {
+    transform: translate(0.5rem, 0);
+  }
+
+  75% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes jiggle-jiggle {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  12.5% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  25% {
+    transform: translate(0.5rem, 0);
+  }
+
+  37.5% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  50% {
+    transform: translate(0.5rem, 0);
+  }
+
+  62.5% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  75% {
+    transform: translate(0.5rem, 0);
+  }
+
+  87.5% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes jiggle-jiggle-jiggle {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  6.25% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  12.5% {
+    transform: translate(0.5rem, 0);
+  }
+
+  18.75% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  25% {
+    transform: translate(0.5rem, 0);
+  }
+
+  31.25% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  37.5% {
+    transform: translate(0.5rem, 0);
+  }
+
+  43.75% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  50% {
+    transform: translate(0.5rem, 0);
+  }
+
+  56.25% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  62.5% {
+    transform: translate(0.5rem, 0);
+  }
+
+  68.75% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  75% {
+    transform: translate(0.5rem, 0);
+  }
+
+  81.25% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  87.5% {
+    transform: translate(0.5rem, 0);
+  }
+
+  93.75% {
+    transform: translate(-0.5rem, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, -2rem);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@media (min-width: 851px) {
+  html,
+  body {
+    overflow: hidden;
+    position: absolute;
+  }
+}
+
+@media (max-width: 850px) {
+  html,
+  body {
+    font-size: 8px;
+  }
+  #App.ios {
+    overflow-y: visible;
+  }
+  .header.chat {
+    top: 0 !important;
+  }
+  .mobile {
+    display: flex !important;
+  }
+  .desktop {
+    display: none !important;
+  }
+}
