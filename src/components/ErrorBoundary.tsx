@@ -56,6 +56,7 @@ export default class ErrorBoundary extends Component<
   render() {
     const { children, innerRef, componentPath, ...props } = this.props;
     const { hasError } = this.state;
+    console.log('here!');
     if (hasError) {
       return (
         <div
